@@ -24,21 +24,23 @@ $age = $_POST['age'];
 if(empty($name)) {
     $_SESSION['mensagem-de-erro'] =  'O campo nome não pode ser vazio, por favor prencha-o com o seu nome!';
     header('Location: index.php');
+    return;
 }
 
 // strlen valida a quantidade de caracteres no campo
 
-if(strlen($name) < 3  ) {
+else if(strlen($name) < 3  ) {
     $_SESSION['mensagem-de-erro'] =  'Preencha um nome acima de 3 caracteres!';
     header('Location: index.php');
-
+    return;
 }
 
 
 // strlen 
-if(strlen($name) > 20 ) {
+else if(strlen($name) > 20 ) {
     $_SESSION['mensagem-de-erro'] =  'Seu nome deve conter menos de 20 caracteres!';
     header('Location: index.php');
+    return;
 }
 
 

@@ -1,3 +1,7 @@
+*FOI ADICIONADO O else if nas condições para o script caso bata a condição de erro, ele parar a execução do código. 
+
+
+
 Trabalhando mensagens de erro com SESSION!
 
 $_SESSION TAMBÉM É UMA ESTRUTURA DE DADOS EM ARRAY ASSOCIATIVO!
