@@ -7,7 +7,11 @@ Trabalhando mensagens de erro com SESSION!
 $_SESSION TAMBÉM É UMA ESTRUTURA DE DADOS EM ARRAY ASSOCIATIVO!
 CRIAMOS UMA CHAVE ASSOCIATIVA PARA MANIPULAR AS AÇÕES!
 
-CONFORME ESTÁ NO arquivo script.php $_SESSION['mensagen-de-erro']
+CONFORME ESTÁ NO arquivo script.php onde foi criado o start do script com o nome da variável onde iŕa guardar as informações do script session_start();
+AO SER CHAMADO NO INDEX.PHP ELE CARREGA SUA APLICAÇÕES QUE SÓ SERÃO EXECUTADAS DE ACORDO COM AS AÇÕES NO FORMULÁRIO DE ENVIO!
+$_SESSION['mensagen-de-erro']
+ 
+a variável session_start() deverá ser colocada antes de todos os codigos no index.php, ou seja acima do código html coforme esta no arquivo index.php. 
  
 AGORA PODEMOS PUXAR ESSAS INFORMAÇÕES NO INDEX E USAR! 
  inde.php
