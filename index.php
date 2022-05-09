@@ -15,12 +15,22 @@
     <p>Formulário para inscrição!</p>
 
     <form action="script.php" method="post">
-        <?php                                                      //? entra na condição e retonra, o : não entra na condição 
+        
+        <?php   
+        
+            //? entra na condição e retonra, o : não entra na condição
+            $mensagemdeSucesso = isset($_SESSION[ 'mensagem-de-sucesso' ]) ? $_SESSION['mensagem-de-sucesso'] : '';
+            if(!empty($mensagemdeSucesso)){
+                echo $mensagemdeSucesso;
+            }
+
             $mensagemdeErro = isset($_SESSION[ 'mensagem-de-erro' ]) ? $_SESSION['mensagem-de-erro'] : '';
             if(!empty($mensagemdeErro)){
                 echo $mensagemdeErro;
             }
+
          ?>
+
         <p>Seu nome <input type="text" name="name"></p>
         <p>Sua idade <input type="text" name="age"></p>
         <p><input type="submit" value="Enviar"></p>

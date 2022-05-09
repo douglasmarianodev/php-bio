@@ -1,3 +1,8 @@
+*EXIBINDO MENSAGENS DE SUCESSO USANDO O SESSION QUANDO ENTRA NAS CONDIÇÕES!
+    COLOCAMOS NO SCRIPT A SESSION DE SUCESSO E ADICIONAMOS A VARIÁVEL DE VERIFICAÇÃO NO INDEX COM NOME DE mensagemdeSucesso PARA VERIFICAR A CONDIÇÃO!
+
+
+
 *FOI ADICIONADO O else if nas condições para o script caso bata a condição de erro, ele parar a execução do código. 
 
 
