@@ -1,0 +1,21 @@
+Trabalhando mensagens de erro com SESSION!
+
+$_SESSION TAMBÉM É UMA ESTRUTURA DE DADOS EM ARRAY ASSOCIATIVO!
+CRIAMOS UMA CHAVE ASSOCIATIVA PARA MANIPULAR AS AÇÕES!
+
+CONFORME ESTÁ NO arquivo script.php $_SESSION['mensagen-de-erro']
+ 
+AGORA PODEMOS PUXAR ESSAS INFORMAÇÕES NO INDEX E USAR! 
+ inde.php
+
+
+
+
+DIFERENTE DA ETRUTURA ABAIXO QUE É NÚMERICO
+
+$categorias = [];
+
+$categorias[] = 'infantil';        SEMPRE INICINANDO DA POSIÇÃO 0
+$categorias[] = 'adolescente';      01
+$categorias[] = 'adulto';           02
+$categorias[] = 'indefinida';       03

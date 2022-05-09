@@ -1,5 +1,9 @@
 <?php
 
+
+
+session_start();
+
 $categorias = [];
 
 $categorias[] = 'infantil';
@@ -14,34 +18,41 @@ $age = $_POST['age'];
 // var_dump($age);
 
 // agora vamos tratar os dados que passam pelo formulário função empty verifica se o campo está vazio
+
+/// agora colocamos um header location para o caso a condição seja verdadeira, o usuário ser redirecionado para o index.php
+// No lugar do return trocar por header(string: 'location: index.php')
 if(empty($name)) {
-    echo 'o nome não pode ser vazio';
-    return;
+    $_SESSION['mensagem-de-erro'] =  'O campo nome não pode ser vazio, por favor prencha-o com o seu nome!';
+    header('Location: index.php');
 }
 
 // strlen valida a quantidade de caracteres no campo
 
 if(strlen($name) < 3  ) {
-    echo 'o nome deve conter mais de 3 caracteres!';
-    return; 
+    $_SESSION['mensagem-de-erro'] =  'Preencha um nome acima de 3 caracteres!';
+    header('Location: index.php');
 
 }
 
 
 // strlen 
 if(strlen($name) > 20 ) {
-    echo 'o nome é muito extenso!';
-    return;
+    $_SESSION['mensagem-de-erro'] =  'Seu nome deve conter menos de 20 caracteres!';
+    header('Location: index.php');
 }
 
 
 
 // aqui o campo idade está passando com string, mas a função abaixo garante que apenas passe números!
 if(!is_numeric($age)){
-    echo 'Os dados do campo idade precisam ser números!';
-    return;
+    $_SESSION['mensagem-de-erro'] =  'Sua idade precisa ser em núremos!';
+    header('Location: index.php');
 }
 
+if(empty($age)){
+    $_SESSION['mensagem-de-erro'] =  'O campo idade é obrigatório!';
+    header('Location: index.php');
+}
 
 
 
