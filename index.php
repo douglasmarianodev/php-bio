@@ -1,6 +1,7 @@
 <!--session_start deve ser sempre colocado antes de todo o código para que ele exexute e repasse todos os seus recursos para o navegador! -->
 <?php 
-    session_start();   //este código não fica visível no navegador para o clinte, é uma linguagem de back-end!
+  //este código não fica visível no navegador para o clinte, é uma linguagem de back-end!
+    include "Services/sessionmessage.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -19,14 +20,15 @@
         <?php   
         
             //? entra na condição e retonra, o : não entra na condição
-            $mensagemdeSucesso = isset($_SESSION[ 'mensagem-de-sucesso' ]) ? $_SESSION['mensagem-de-sucesso'] : '';
-            if(!empty($mensagemdeSucesso)){
-                echo $mensagemdeSucesso;
+            $messagesuccess = GetSuccessMessage();
+            if(!empty($messagesuccess)){
+
+                echo $messagesuccess;
             }
 
-            $mensagemdeErro = isset($_SESSION[ 'mensagem-de-erro' ]) ? $_SESSION['mensagem-de-erro'] : '';
-            if(!empty($mensagemdeErro)){
-                echo $mensagemdeErro;
+            $messageerror = GetErrorMessage();
+            if(!empty($messageerror)){
+                echo $messageerror;
             }
 
          ?>

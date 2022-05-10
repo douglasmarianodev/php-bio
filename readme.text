@@ -1,3 +1,21 @@
+* CRIAMOS UMA PASTA PARA DEIXAR O CODIGO MAIS CLEAN
+* CRIAMOS 3 ARQUVIOS PARA OTIMIZAR O CÓDIGO
+- category.php (para definir as categorias)
+- sessionmessage.php (para manipular as mensagens que vamos gravar em session)
+- validation.php  (para validar os dados)
+
+após isso, fizemos a inclusão desses arquivos no script.php para serem chamados caso necessário.
+usamos o inlude para adicionar!
+o session_starto do arquivo script.php foi removido devido aos arquivos já ter, ele se tornou obsoleto!
+
+o header('Location: index.php') para redirecionar para página de interesse, foi colocado apenas no script.php e não nas funções 
+individuais. 
+
+no index foi modificamos a lógica do script para exibir as mensagens, retiramos o código repetdio e usamos o as funções encapsuladas.
+
+incluimos o script de session no index para as funções funcionarem corretamente.
+
+-------------------------------------------------------------------------------------------------------------------------------
 *EXIBINDO MENSAGENS DE SUCESSO USANDO O SESSION QUANDO ENTRA NAS CONDIÇÕES!
     COLOCAMOS NO SCRIPT A SESSION DE SUCESSO E ADICIONAMOS A VARIÁVEL DE VERIFICAÇÃO NO INDEX COM NOME DE mensagemdeSucesso PARA VERIFICAR A CONDIÇÃO!
 
